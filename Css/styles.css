@@ -48,18 +48,22 @@ main {
     padding: 100px 20px 0px; /* Adjust the top padding to make space for the header and nav */
 }
 
+/* Add your custom CSS styles here */
+/* ... (previous CSS rules) ... */
+
 footer {
     background-color: #222;
     color: #fff;
-    padding: 200px 0;
+    padding: 150px 0;
     text-align: center;
     position: relative; /* Set the footer as a positioning context */
     z-index: 2; /* Set a higher z-index for the footer */
-    font-size: 25px; /* Updated font-size for the footer */
+    font-size: 35px; /* Updated font-size for the footer */
+    height: 100%; /* Ensure the footer takes full height of its container */
 }
 
 /* Footer link styles */
-footer a {
+footer a { 
     color: #fff;
     text-decoration: underline;
 }
@@ -90,4 +94,41 @@ main li {
     font-size: 16px;
     line-height: 1.6;
     margin-bottom: 5px;
+}
+
+/* Center and position "Contact Us" text at the top of the footer */
+footer p {
+    margin: 10px;
+    position: relative;
+  
+    left: 50%;
+    transform: translate(-50%, -200%);
+}
+
+/* Media queries for mobile devices */
+@media only screen and (max-width: 768px) {
+    header h1 {
+        font-size: 28px;
+    }
+    
+    nav {
+        height: 95px;
+    }
+
+    nav a {
+        font-size: 16px;
+    }
+
+    main {
+        padding-top: 90px;
+    }
+
+    footer {
+        padding: 200px 0;
+    }
+
+    /* Adjust the font size for the footer text on mobile */
+    footer p {
+        font-size: 30px;
+    }
 }
