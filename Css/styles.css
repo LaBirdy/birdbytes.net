@@ -6,35 +6,88 @@ body {
 }
 
 header {
-    background-color: #f0f0f0;
-    padding: 10px;
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
     text-align: center;
+    position: relative; /* Set the header as a positioning context */
+    z-index: 2; /* Set a higher z-index for the header */
+}
+
+header h1 {
+    margin: 0;
+    font-size: 36px;
 }
 
 nav {
-    background-color: #333;
-    color: #fff;
+    background-color: #444; /* Adjust the background color back to grey */
     display: flex;
     justify-content: center;
     padding: 10px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1; /* Set a lower z-index for the navigation bar to appear behind the header */
+    height: 100px;
 }
 
 nav a {
     color: #fff;
-    margin: 0 10px;
+    margin: 0 15px;
     text-decoration: none;
+    font-size: 18px;
+    display: flex; /* Use Flexbox layout */
+    flex-direction: column; /* Stack items vertically */
+    justify-content: flex-end; /* Align items to the bottom */
+    align-items: center; /* Center items horizontally */
+    height: 100%; /* Take full height of the navigation box */
 }
 
 main {
-    padding: 20px;
+    padding: 100px 20px 0px; /* Adjust the top padding to make space for the header and nav */
 }
 
-p {
-    margin: 0 0 10px;
-}
 footer {
-    background-color: #333;
+    background-color: #222;
     color: #fff;
-    padding: 10px;
+    padding: 200px 0;
     text-align: center;
+    position: relative; /* Set the footer as a positioning context */
+    z-index: 2; /* Set a higher z-index for the footer */
+    font-size: 25px; /* Updated font-size for the footer */
+}
+
+/* Footer link styles */
+footer a {
+    color: #fff;
+    text-decoration: underline;
+}
+
+/* Style hover effects for footer links (optional) */
+footer a:hover {
+    color: #ffcc00;
+}
+
+/* Additional styles for specific elements */
+main h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+main p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+main ul {
+    list-style: disc;
+    margin-left: 30px;
+}
+
+main li {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 5px;
 }
