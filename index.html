@@ -54,5 +54,21 @@
         <p>Contact Us: <a href="mailto:contact.birdbytes@gmail.com">contact.birdbytes@gmail.com</a></p><p> Phone: <a href="tel:+15417281238">(541) 728-1238</a></p>
     </footer>
 </body>
-
+<script>
+    // Add functionality to smooth scroll to sections when clicking on navigation links
+    const navLinks = document.querySelectorAll("nav a");
+    navLinks.forEach(link => {
+        link.addEventListener("click", (event) => {
+            event.preventDefault();
+            const targetSectionId = link.getAttribute("href").replace("#", "");
+            if (targetSectionId === "") {
+                // If the target is an empty string (Home button), scroll to the top of the page
+                window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+            } else {
+                const targetSection = document.getElementById(targetSectionId);
+                targetSection.scrollIntoView({ behavior: "smooth", block: "start" });
+            }
+        });
+    });
+</script>
 </html>
